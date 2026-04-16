@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+  apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: go-simple-webserver
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: ghcr.io/echimandrei/ci_cd_lab:latest
+          image: ghcr.io/echimandrei/go-simple-webserver@sha256:<hash>
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
